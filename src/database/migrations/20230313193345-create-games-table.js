@@ -15,7 +15,6 @@ module.exports = {
       },
       grid: {
         type: Sequelize.STRING,
-        allowNull: false,
         unique: true
       },
       wallpaper: {

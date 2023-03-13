@@ -2,21 +2,13 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express'
-import { Games } from './models/games'
+import { router } from './routes'
 
-const PORT = process.env.PORT || 3000
 const app = express()
-const router = express.Router()
 
-router.get('/', (req, res) => res.json({ message: 'Hello World' }))
-
-router.get('/games', async (req, res) => {
-    const games = await Games.findAll()
-    return res.json(games)
-})
-
+app.use(express.json());
 app.use(router);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`)
 })

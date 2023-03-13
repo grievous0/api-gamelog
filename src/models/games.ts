@@ -34,7 +34,6 @@ const Games = sequelize.define<GameInstance>(
         },
         grid: {
             type: DataTypes.STRING,
-            allowNull: false,
             unique: true,
         },
         wallpaper: {
