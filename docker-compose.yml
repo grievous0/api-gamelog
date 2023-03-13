@@ -12,9 +12,8 @@ services:
       - "3000:3000"
 
     environment:
-      DATABASE_URL: "postgres://postgres:postgres@db:5432/gamelog_development"
+      DATABASE_URL: "postgres://postgres:postgres@db:5432/gamelog_develop"
       NODE_ENV: "development"
-      PORT: "3000"
 
     networks:
       - api-sequelize
