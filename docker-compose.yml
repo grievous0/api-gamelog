@@ -12,7 +12,7 @@ services:
       - "3000:3000"
 
     environment:
-      DATABASE_URL: "postgres://postgres:postgres@db:5432/gamelog_develop"
+      DATABASE_URL: "postgres://postgres:postgres@db:5432/gamelog_api_development"
       NODE_ENV: "development"
 
     networks:
